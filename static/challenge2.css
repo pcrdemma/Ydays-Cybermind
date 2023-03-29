@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5dc;
+    background-color: #BCC1BA;
 }
 
 .C2 {
@@ -14,4 +14,7 @@ body {
 
 #password {
     text-align: center;
+}
+#timer{
+    font-size:30px;
 }

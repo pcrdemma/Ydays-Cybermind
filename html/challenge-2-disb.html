@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <div id="timer">10:00</div>
     <title>Challenge 2</title>
     <link rel="stylesheet" href="/static/challenge2.css">
     <link rel="shortcut icon" href="/logo/favicon.png" type="image/x-icon">
@@ -12,6 +13,32 @@
     <div class ="C2">
     <h1>Challenge 2</h1>
     </div>
+    <script>
+        const timerElement = document.getElementById("timer")
+        function starttimer(){
+            let endtimer = false;
+            const departMinutes = 10
+            let temps = departMinutes * 60
+            
+            setInterval(() => {
+                let minutes = parseInt(temps / 60, 10)
+                let secondes = parseInt(temps % 60, 10)
+    
+                minutes = minutes < 10 ? "0" + minutes : minutes
+                secondes = secondes < 10 ? "0" + secondes : secondes
+    
+                timerElement.innerText = `${minutes}:${secondes}`
+                temps = temps <= 0 ? 0 : temps - 1
+                if (timerElement.innerText === '00:00' && !endtimer){
+                    alert("Sais-tu que disable veut dire désactivé en anglais ?");
+                    endtimer = true;
+                }
+
+            }, 1000)
+        }
+        (starttimer());
+
+    </script>
     <form action="/html/win-C2.html">
         <div id = "password">
             <label>Entrez le mot de passe:</label>
