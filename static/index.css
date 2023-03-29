@@ -1,17 +1,17 @@
 body{
-    background-color: lightblue;
+    background-color: #DAC6B5;
 }
 html, body, #app {
     height: 100%;
 }
 .Accueil h1{
-    text-shadow:#5EE8FF 0 -2px 0,
+    /* text-shadow:#5EE8FF 0 -2px 0,
     #0097BA 2px 2px 0,
     #00748F 4px 4px 0,
     #006178 6px 6px 0.5px,
     #333333 8px 11px 10px;
     color:#00CFFF;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); */
     text-align: center;
     font-size: 80px;
 }
