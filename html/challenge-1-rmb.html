@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Challenge 1</title>
+  <link rel="stylesheet" type="text/css" href="/static/challenge1.css" media="all" />
+  <link rel="shortcut icon" href="/logo/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class ="C1"><h1>Challenge 1</h1></div>
+  
+  <form id="form" action="/html/win-C1.html">
+    <div id ="consigne">
+      <label>Entrez le mot :  </label> <!-- mettre le texte d'une couleur-->
+      <input name="ValueEnigme" type="text" autocomplete="off" autofocus> <!-- mettre la barre en blanc crème-->
+      <button class="btn">Submit</button>
+    </div>
+    
+  </form>
+  <script>
+    var btn = document.querySelector(".btn")
+    var position;
+    btn.addEventListener("mouseover", function () {
+      position ? (position = 0) : (position = 400);
+      btn.style.transform = `translate(${position}px,0px)`;
+      btn.style.transition = "all 0.3s ease";
+    });
+    var form = document.querySelector('#form');
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = document.querySelector('input[name="ValueEnigme"]');
+      if (input.value == 'le mot') {
+        this.submit();
+      } else {
+        alert("Ce n'est pas correct")
+      }
+    });
+  </script>
+</body>
+
+</html>
