@@ -3,16 +3,6 @@ body {
 }
 
 .titreh1 h1 {
-    /* background: linear-gradient(to right, #36ecde, #000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    /* text-shadow: #5EE8FF 0 -2px 0,
-        #0097BA 2px 2px 0,
-        #00748F 4px 4px 0,
-        #006178 6px 6px 0.5px,
-        #333333 8px 11px 10px;
-    color: #00CFFF;
-    color: rgb(255, 255, 255); */
     text-align: center;
     font-size: 80px;
     /* border: 1px solid red; */
@@ -45,4 +35,84 @@ body {
     border: 1px solid black;
     border-radius: 27px;
     flex-direction: column;
+}
+html{
+    width:100%;
+    height:100%;
+    font-size:100%;
+  }
+  *{
+    box-sizing:border-box
+  }
+  #menu_dynamique ul {
+      width:300px;
+      list-style:none;
+      padding:0px;
+  }
+  
+  #menu_dynamique ul li {
+      text-align:center;
+      border: 1px solid #BAA898 ;
+      padding:15px 15px;
+      max-height: 55px;
+  }
+  
+  #menu_dynamique ul li a{
+    text-decoration:none;
+    color:#BAA898;
+    text-transform:uppercase;
+    
+  }
+  
+  #menu_dynamique ul li:hover {
+      -moz-transition: all .8s; 
+      -webkit-transition: all .8s; 
+      -o-transition: all .8s; 
+      transition: all .8s;
+  }
+  
+  
+  #menu_dynamique ul > li > ul{
+    opacity:0;   
+    display:none;
+    z-index:999;
+    border: 1px solid #BAA898;
+    margin-top:-35px;
+    background-color:#54B6A8;
+  }
+  
+  #menu_dynamique ul li:hover > ul {
+    display: block; 
+    position:relative;
+    opacity:1;
+    margin-left:185px
+  }
+  #menu_dynamique{
+    height: 100%;
+    width: 100%;
+  }
+
+.menu-CTF:hover{
+  background-color: #BAA898;
+  color:black;
+}
+
+.menu-Gitea:hover{
+  background-color: #BAA898;
+  color:black;
+}
+
+.menu-Challenge1:hover{
+  background-color: #BAA898;
+  color:black;
+}
+
+.menu-Challenge2:hover{
+  background-color: #BAA898;
+  color:black;
+}
+
+.menu-Challenge3:hover{
+  background-color: #BAA898;
+  color:black;
 }

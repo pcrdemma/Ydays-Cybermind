@@ -1,51 +1,171 @@
-body{
+body {
     background-color: #DAC6B5;
+    overflow: hidden;
 }
-html, body, #app {
-    height: 100%;
-}
-.Accueil h1{
-    /* text-shadow:#5EE8FF 0 -2px 0,
-    #0097BA 2px 2px 0,
-    #00748F 4px 4px 0,
-    #006178 6px 6px 0.5px,
-    #333333 8px 11px 10px;
-    color:#00CFFF;
-    color: rgb(255, 255, 255); */
-    text-align: center;
-    font-size: 80px;
-}
-img{
-    width: 100px;
-    height: 70px;
-}
-.navbar {
-    display: flex;
-    align-items: center;
-    padding : 10px;
-    height: 65px;
-    color : white;
-    background-color: rgb(118, 204, 233);
-}
-#container-links {
-    width: 100%;
-    font-weight: bold;
-    display: flex;
-    justify-content: flex-end;
-}
-.links {
-    display: flex;
-}
-ul{
-    list-style: none;
-}
-.container-image{ 
 
-    display: flex;
-    justify-content: flex-start;
+a {
+    text-decoration: none;
+    color: black;
 }
-@media screen and (max-width: 1350px){
-    .Accueil h1{
-        margin-top: 40px;
-    }
+a:hover{
+    color: #DAC6B5;
+}
+
+.container-square-home {
+    display: flex;
+    justify-content: center;
+
+}
+
+.square-home {
+    margin-top: 30px;
+    border: 1px solid white;
+    width: 1180px;
+    height: 500px;
+}
+
+.container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CybermindLogo {
+    width: 640px;
+    height: 310px;
+}
+
+.acceder {
+    margin-top: -10px;
+    border-radius: 10px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #C9A98E;
+    background-color: #DAC6B5;
+    cursor: pointer;
+}
+
+.acceder:hover {
+    font-family: 'Inter', sans-serif;
+    background-color: #C9A98E;
+}
+
+/* -------------------------SCROLL BAR------------------------------ */
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */
+    /* border:1px solid #C99393;
+    border-radius: 20px; */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #DAC6B5;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+}
+
+/* -------------------------SCROLL BAR------------------------------ */
+
+.all {
+    min-height: 130vh;
+    margin-top: 30px;
+    margin-left: -6px;
+    margin-right: -6px;
+    background-color: white;
+}
+
+.container-square {
+    display: flex;
+    justify-content: center;
+
+}
+
+.square {
+    border: 1px solid #DAC6B5;
+    width: 1180px;
+    height: auto;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formation{
+    --color: #DAC6B5; /* the border color */
+    --border: 10px;   /* the border thickness*/
+    --offset: 20px;   /* control the offset*/
+    --gap: 5px;       /* the gap on hover */
+    
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding: 
+      calc(var(--gap) + var(--border))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border));
+    background: 
+      linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+      linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.4);
+    transition: .5s;
+    cursor: pointer;
+    cursor: pointer;
+    font-family: 'Kodchasan';
+    font-size: 30px;
+}
+
+.formation:hover{
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+}
+
+.challenge{
+    --color: #DAC6B5; /* the border color */
+    --border: 10px;   /* the border thickness*/
+    --offset: 20px;   /* control the offset*/
+    --gap: 5px;       /* the gap on hover */
+    
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)),var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding: 
+      calc(var(--gap) + var(--border))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border) + var(--offset))
+      calc(var(--gap) + var(--border));
+    background: 
+      linear-gradient(      var(--_c)) var(--_o) var(--_o), 
+      linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.4);
+    transition: .5s;
+    cursor: pointer;
+    cursor: pointer;
+    font-family: 'Kodchasan';
+    font-size: 30px;
+}
+
+.challenge:hover{
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+}
+
+.copyright {
+    font-family: 'Kodchasan';
+    color: black;
+    font-weight: 100;
+    text-align: center;
 }

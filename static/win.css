@@ -2,23 +2,11 @@ body {
     background-color: #c9c9c9;
 }
 
-.btn {
-    font-size: 30px;
-    justify-content: center;
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-
-}
 #win-text{
     margin-top: auto;
-    text-align: center;
-    justify-content: center;
     font-size: 30px;
 }
-
-.W {
+h1{
     text-shadow: #8ec44d 0 -1px 0,
         #2b9134 2px 2px 0,
         #147d10 3px 3px 0,
@@ -26,5 +14,55 @@ body {
         #333 5px 5px 10px;
     color: #9fff8a;
     text-align: center;
-    font-size: 50px;
+    font-size: 90px;
+}
+
+.win {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.container-text{
+    display: flex;
+}
+
+.challenge{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #c9c9c9;
+
+}
+.Accueil{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: #c9c9c9;
+}
+.bouton{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.challenge:hover{
+    border: 1px solid black;
+    background-color: #9fff8a;
+}
+.Accueil:hover{
+    border: 1px solid black;
+    background-color: #9fff8a;
 }
