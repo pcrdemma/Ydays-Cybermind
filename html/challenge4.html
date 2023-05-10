@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/challenge4.css">
+    <link rel="shortcut icon" href="/logo/favicon.png" type="image/x-icon">
+    <title>Challenge 4</title>
+</head>
+
+<body>
+    <div class="all">
+        <div id="timer">10:00</div>
+        <div class="container-title">
+            <div class="title">
+                Challenge 4
+            </div>
+        </div>
+        <script>
+            const timerElement = document.getElementById("timer")
+            function starttimer(){
+                let endtimer = false;
+                const departMinutes = 10
+                let temps = departMinutes * 60
+                
+                setInterval(() => {
+                    let minutes = parseInt(temps / 60, 10)
+                    let secondes = parseInt(temps % 60, 10)
+        
+                    minutes = minutes < 10 ? "0" + minutes : minutes
+                    secondes = secondes < 10 ? "0" + secondes : secondes
+        
+                    timerElement.innerText = `${minutes}:${secondes}`
+                    temps = temps <= 0 ? 0 : temps - 1
+                    if (timerElement.innerText === '00:00' && !endtimer){
+                        alert("As-tu cliqué sur l'image ?");
+                        endtimer = true;
+                    }
+    
+                }, 1000)
+            }
+            (starttimer());
+    
+        </script>
+        <br>
+        <br>
+        <form id="form" action="/html/win-C1.html">
+            <div id="consigne">
+                <label>Entrez la phrase : </label> <!-- mettre le texte d'une couleur-->
+                <input name="ValueEnigme" type="text" autocomplete="off" autofocus> <!-- mettre la barre en blanc crème-->
+                <button class="btn">Submit</button>
+            </div>
+    
+        </form>
+        <script>
+            var form = document.querySelector('#form');
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var input = document.querySelector('input[name="ValueEnigme"]');
+                if (input.value == 'Félicitation, tu viens de réussir le dernier Challenge') {
+                    this.submit();
+                } else {
+                    alert("Ce n'est pas correct")
+                }
+            });
+        </script>
+        <br>
+        <br>
+        <div class="image">
+            <a href="/logo/new.png" download>
+                <img src="/logo/new.png" class="image-steganographie">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
